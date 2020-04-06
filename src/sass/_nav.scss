@@ -19,6 +19,7 @@ nav {
     transition: font-size 0.5s ease, color 1s ease-out, text-shadow 1s;
     // ANCHOR animation
     clip-path: circle(0%);
+    -webkit-clip-path: circle(0%);
     transition: clip-path 0.5s ease-in-out;
     &:hover {
       font-size: 3rem;
@@ -63,7 +64,9 @@ nav {
   cursor: pointer;
   color: $base-color;
   transition: color 2s ease-out;
-  animation: bounce2 2s infinite;
+  i {
+    animation: bounce2 2s infinite;
+  }
   &:hover {
     color: black;
     transition: color 2s ease-in;
@@ -80,7 +83,21 @@ nav {
 .visible {
   // ANCHOR animation
   clip-path: circle(50%);
+  -webkit-clip-path: circle(50%);
   transition: all 1s ease-in-out;
+}
+
+.icon-animation-part-1 {
+  // ANCHOR animation
+  clip-path: circle(100%);
+  -webkit-clip-path: circle(100%);
+  transition: clip-path 1.5s ease-in;
+}
+.icon-animation-part-2 {
+  // ANCHOR animation
+  clip-path: circle(0%);
+  -webkit-clip-path: circle(0%);
+  transition: clip-path 0.5s ease-out;
 }
 
 // Keyframe Animations
@@ -102,6 +119,9 @@ nav {
 
 .hidden {
   display: none;
+  clip-path: circle(100%);
+  -webkit-clip-path: circle(100%);
+  transition: all 1s ease-in-out;
 }
 
 .click-me {

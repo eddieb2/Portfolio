@@ -2,8 +2,8 @@ import React from 'react';
 
 const Enter = () => {
   const handleEntry = () => {
-    const div = document.querySelector('.enter-site');
-    div.classList.toggle('access-site');
+    const welcomePage = document.querySelector('.enter-site');
+    welcomePage.classList.toggle('access-site');
   };
 
   return (
@@ -20,9 +20,10 @@ const Enter = () => {
         <div className="fifth">o</div>
         <div className="sixth">m</div>
         <div className="seventh">e</div>
-        <button onClick={handleEntry}>
+        <div className="door" onClick={handleEntry}>
           <i className="fas fa-door-open"></i>
-        </button>
+          <h1>click me</h1>
+        </div>
       </div>
     </>
   );

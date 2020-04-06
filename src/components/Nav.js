@@ -1,23 +1,28 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState } from 'react';
+import { Link, useLocation } from 'react-router-dom';
 
 const Nav = () => {
+  const location = useLocation();
+
   const dropDownHandler = (event) => {
     const list = document.querySelectorAll('a');
     const clickMe = document.querySelector('.click-me');
     const greeting = document.querySelector('.greeting');
     const codeIcons = document.querySelectorAll('.codeIcons');
 
+    // Adds and removes the visible class to the anchor elements
     list.forEach((item) => {
       item.classList.toggle('visible');
     });
 
+    // Applies the animation to the icons in the nav
     codeIcons.forEach((item) => {
-      item.classList.toggle('hidden');
+      item.classList.toggle('icon-animation-part-1');
+      item.classList.toggle('icon-animation-part-2');
     });
+
+    // Hides the "Click Me" text by the hamburger icon
     clickMe.classList.toggle('hidden');
-    greeting.classList.toggle('hidden');
-    console.log(codeIcons);
   };
 
   return (
@@ -28,42 +33,69 @@ const Nav = () => {
       </div>
       <nav>
         <div className="greeting">
-          <i className="fab fa-html5 codeIcons"></i>
-          <i className="fab fa-css3-alt codeIcons"></i>
-          <i className="fab fa-js codeIcons"></i>
-          <i className="fab fa-react codeIcons"></i>
+          <i className="fab fa-html5 codeIcons icon-animation-part-1"></i>
+          <i className="fab fa-css3-alt codeIcons icon-animation-part-1"></i>
+          <i className="fab fa-js codeIcons icon-animation-part-1"></i>
+          <i className="fab fa-react codeIcons icon-animation-part-1"></i>
         </div>
         <Link to="/">
-          <span>
-            <i className="fas fa-square"></i>
-          </span>
-          {/* <span>
-            <i class="far fa-square"></i>
-          </span> */}
+          {location.pathname === '/' ? (
+            <span>
+              <i className="fas fa-square"></i>
+            </span>
+          ) : (
+            <span>
+              <i className="far fa-square"></i>
+            </span>
+          )}
           home
         </Link>
         <Link to="/about">
-          <span>
-            <i className="far fa-square"></i>
-          </span>
+          {location.pathname === '/about' ? (
+            <span>
+              <i className="fas fa-square"></i>
+            </span>
+          ) : (
+            <span>
+              <i className="far fa-square"></i>
+            </span>
+          )}
           about
         </Link>
         <Link to="/projects">
-          <span>
-            <i className="far fa-square"></i>
-          </span>
+          {location.pathname === '/projects' ? (
+            <span>
+              <i className="fas fa-square"></i>
+            </span>
+          ) : (
+            <span>
+              <i className="far fa-square"></i>
+            </span>
+          )}
           projects
         </Link>
         <Link to="/resume">
-          <span>
-            <i className="far fa-square"></i>
-          </span>
+          {location.pathname === '/resume' ? (
+            <span>
+              <i className="fas fa-square"></i>
+            </span>
+          ) : (
+            <span>
+              <i className="far fa-square"></i>
+            </span>
+          )}
           resume
         </Link>
         <Link to="/contact">
-          <span>
-            <i className="far fa-square"></i>
-          </span>
+          {location.pathname === '/contact' ? (
+            <span>
+              <i className="fas fa-square"></i>
+            </span>
+          ) : (
+            <span>
+              <i className="far fa-square"></i>
+            </span>
+          )}
           contact
         </Link>
       </nav>
