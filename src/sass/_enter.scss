@@ -8,15 +8,29 @@
   color: black;
   font-size: 5rem;
   clip-path: circle(100%);
-  button {
+  -webkit-clip-path: circle(100%);
+  .door {
+    cursor: pointer;
     position: absolute;
     top: 45%;
     left: 48%;
+    text-align: center;
+    h1 {
+      color: $base-color;
+      font-size: 1.25rem;
+      text-align: center;
+      transition: all 1s ease-in;
+      &:hover {
+        color: black;
+        text-decoration: underline;
+      }
+    }
   }
 }
 
 .access-site {
   clip-path: circle(0px at 48% 45%);
+  -webkit-clip-path: circle(0px at 48% 45%);
   transition: clip-path 2s ease-in;
 }
 
