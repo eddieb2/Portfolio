@@ -1,0 +1,122 @@
+.enter-site {
+  position: absolute;
+  z-index: 1;
+  background-color: $base-color;
+  background-color: white;
+  height: 100%;
+  width: 100%;
+  color: black;
+  font-size: 5rem;
+  clip-path: circle(100%);
+  button {
+    position: absolute;
+    top: 45%;
+    left: 48%;
+  }
+}
+
+.access-site {
+  clip-path: circle(0px at 48% 45%);
+  transition: clip-path 2s ease-in;
+}
+
+.fas.fa-door-open {
+  color: $base-color;
+  transition: all 3s ease-in-out;
+  animation: bounce 2s infinite;
+  &:hover {
+    color: black;
+    transition: all 3s ease-in-out;
+  }
+}
+
+.first {
+  position: absolute;
+  top: 20%;
+  left: 20%;
+  padding: 1%;
+  color: $base-color;
+  animation: first 2s;
+}
+.second {
+  position: absolute;
+  top: 20%;
+  left: 30%;
+  padding: 1%;
+  color: $base-color;
+  animation: first 2s;
+}
+.third {
+  position: absolute;
+  top: 20%;
+  left: 40%;
+  padding: 1%;
+  color: $base-color;
+  animation: first 2s;
+}
+.fourth {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  padding: 1%;
+  color: $base-color;
+  animation: first 2s;
+}
+.fifth {
+  position: absolute;
+  top: 20%;
+  left: 60%;
+  padding: 1%;
+  color: $base-color;
+  animation: first 2s;
+}
+.sixth {
+  position: absolute;
+  top: 20%;
+  left: 70%;
+  padding: 1%;
+  color: $base-color;
+  animation: first 2s;
+}
+.seventh {
+  position: absolute;
+  top: 20%;
+  left: 80%;
+  padding: 1%;
+  color: $base-color;
+  animation: first 2s;
+}
+
+@keyframes first {
+  from {
+    top: -10%;
+  }
+  to {
+    top: 20%;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-30px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
+}
+
+.description {
+  border-bottom: 1px solid $base-color;
+  border-right: 1px solid $base-color;
+  border-bottom-right-radius: 15px;
+  width: 5%;
+  font-size: 1.5rem;
+  text-align: center;
+}

@@ -8,10 +8,12 @@ import About from './components/About';
 import Resume from './components/Resume';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
+import Enter from './components/Enter';
 
 function App() {
   return (
     <Router>
+      <Enter />
       <Nav />
       <Route exact path="/">
         <Home />
