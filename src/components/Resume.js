@@ -2,7 +2,7 @@ import React from 'react';
 
 const Resume = () => {
   return (
-    <div>
+    <div className="resume-page-wrapper">
       <h1>Resume</h1>
     </div>
   );

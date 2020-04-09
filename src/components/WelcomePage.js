@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Enter = () => {
+const WelcomePage = () => {
   const handleEntry = () => {
     const welcomePage = document.querySelector('.enter-site');
     welcomePage.classList.toggle('access-site');
@@ -29,4 +29,4 @@ const Enter = () => {
   );
 };
 
-export default Enter;
+export default WelcomePage;

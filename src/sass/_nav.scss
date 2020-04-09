@@ -1,17 +1,13 @@
 nav {
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
+  height: 8vh;
   border-bottom: 2px solid $base-color;
   padding: 1% 0 1% 0;
   background-color: white;
-  @media (max-width: 650px) {
-    flex-wrap: wrap;
-    padding-top: 2%;
-  }
-  @media (max-width: 470px) {
-  }
   a {
-    width: 25%;
+    width: 100%;
     font-size: 3.6rem;
     text-align: center;
     font-family: 'Oxygen', sans-serif;
@@ -24,60 +20,19 @@ nav {
     &:hover {
       font-size: 3rem;
     }
-    @media (max-width: 850px) {
-      font-size: 2.6rem;
-      &:hover {
-        font-size: 2rem;
-      }
-    }
-    @media (max-width: 650px) {
-      margin-bottom: 2%;
-      margin-left: 2%;
-      font-size: 2.8rem;
-      text-align: left;
-    }
-    @media (max-width: 470px) {
-      width: 100%;
-      margin-bottom: 4%;
-    }
     span {
       font-size: 3.6rem;
       color: $base-color;
       margin-right: 2%;
-      @media (max-width: 850px) {
-        font-size: 3.2rem;
-      }
-      @media (max-width: 650px) {
-        margin-right: 3%;
-      }
-      @media (max-width: 470px) {
-        margin-right: 1%;
-      }
     }
   }
 }
 
 .drop-down-icon {
-  position: absolute;
-  top: 2%;
-  left: 2%;
   cursor: pointer;
   color: $base-color;
   transition: color 2s ease-out;
-  i {
-    animation: bounce2 2s infinite;
-  }
-  &:hover {
-    color: black;
-    transition: color 2s ease-in;
-  }
-  @media (max-width: 470px) {
-    display: flex;
-    justify-content: center;
-    padding-bottom: 2%;
-    border-bottom: 1px solid black;
-    background: $base-color;
-  }
+  margin-left: 1%;
 }
 
 .visible {
@@ -100,23 +55,6 @@ nav {
   transition: clip-path 0.5s ease-out;
 }
 
-// Keyframe Animations
-@keyframes bounce2 {
-  0%,
-  20%,
-  50%,
-  80%,
-  100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-20px);
-  }
-  60% {
-    transform: translateY(-15px);
-  }
-}
-
 .hidden {
   display: none;
   clip-path: circle(100%);
@@ -135,4 +73,21 @@ nav {
   display: flex;
   justify-content: space-around;
   width: 25%;
+}
+
+// Keyframe Animations
+@keyframes bounce2 {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-15px);
+  }
 }

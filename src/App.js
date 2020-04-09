@@ -4,30 +4,30 @@ import './app.scss';
 // Components
 import Nav from './components/Nav';
 import Home from './components/Home';
-import About from './components/About';
+import Bio from './components/Bio';
 import Resume from './components/Resume';
 import Projects from './components/Projects';
 import Contact from './components/Contact';
-import Enter from './components/Enter';
+import WelcomePage from './components/WelcomePage';
 
 function App() {
   return (
     <Router>
-      <Enter />
+      <WelcomePage />
       <Nav />
-      <Route exact path="/">
+      <Route exact path='/'>
         <Home />
       </Route>
-      <Route path="/about">
-        <About />
+      <Route path='/bio'>
+        <Bio />
       </Route>
-      <Route path="/projects">
+      <Route path='/projects'>
         <Projects />
       </Route>
-      <Route path="/resume">
+      <Route path='/resume'>
         <Resume />
       </Route>
-      <Route path="/contact">
+      <Route path='/contact'>
         <Contact />
       </Route>
     </Router>
