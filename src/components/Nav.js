@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
 
 const Nav = () => {
@@ -7,7 +7,6 @@ const Nav = () => {
   const dropDownHandler = (event) => {
     const list = document.querySelectorAll('a');
     const clickMe = document.querySelector('.click-me');
-    const greeting = document.querySelector('.greeting');
     const codeIcons = document.querySelectorAll('.codeIcons');
 
     // Adds and removes the visible class to the anchor elements
@@ -27,11 +26,11 @@ const Nav = () => {
 
   return (
     <>
-      <div className="drop-down-icon" onClick={dropDownHandler}>
-        <i className="fas fa-bars fa-5x"></i>
-        <div className="click-me">Click Me</div>
-      </div>
       <nav>
+        <div className="drop-down-icon" onClick={dropDownHandler}>
+          <i className="fas fa-bars fa-5x"></i>
+          <div className="click-me">Click Me</div>
+        </div>
         <div className="greeting">
           <i className="fab fa-html5 codeIcons icon-animation-part-1"></i>
           <i className="fab fa-css3-alt codeIcons icon-animation-part-1"></i>
@@ -50,8 +49,8 @@ const Nav = () => {
           )}
           home
         </Link>
-        <Link to="/about">
-          {location.pathname === '/about' ? (
+        <Link to="/bio">
+          {location.pathname === '/bio' ? (
             <span>
               <i className="fas fa-square"></i>
             </span>
@@ -60,7 +59,7 @@ const Nav = () => {
               <i className="far fa-square"></i>
             </span>
           )}
-          about
+          bio
         </Link>
         <Link to="/projects">
           {location.pathname === '/projects' ? (

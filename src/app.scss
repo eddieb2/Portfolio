@@ -1,4 +1,4 @@
-// Imports
+// Imports //
 
 // Reset
 @import './sass/reset';
@@ -6,11 +6,23 @@
 // Variables
 @import './sass/variables';
 
-// Navigation Bar Component
+// Welcome Page
+@import './sass/welcome-page';
+
+// Navigation Bar
 @import './sass/nav';
 
-// Enter Website Component
-@import './sass/enter';
-
-// Home Page Component
+// Home Page
 @import './sass/home';
+
+// Bio Page
+@import './sass/bio';
+
+// Projects Page
+@import './sass/projects';
+
+// Resume Page
+@import './sass/resume';
+
+// Contact Page
+@import './sass/contact';
