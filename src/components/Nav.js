@@ -27,72 +27,72 @@ const Nav = () => {
   return (
     <>
       <nav>
-        <div className="drop-down-icon" onClick={dropDownHandler}>
-          <i className="fas fa-bars fa-5x"></i>
-          <div className="click-me">Click Me</div>
+        <div className='drop-down-icon' onClick={dropDownHandler}>
+          <i className='fas fa-bars fa-5x'></i>
+          <div className='click-me'>Click Me</div>
         </div>
-        <div className="greeting">
-          <i className="fab fa-html5 codeIcons icon-animation-part-1"></i>
-          <i className="fab fa-css3-alt codeIcons icon-animation-part-1"></i>
-          <i className="fab fa-js codeIcons icon-animation-part-1"></i>
-          <i className="fab fa-react codeIcons icon-animation-part-1"></i>
+        <div className='greeting'>
+          <i className='fab fa-html5 codeIcons icon-animation-part-1'></i>
+          <i className='fab fa-css3-alt codeIcons icon-animation-part-1'></i>
+          <i className='fab fa-js codeIcons icon-animation-part-1'></i>
+          <i className='fab fa-react codeIcons icon-animation-part-1'></i>
         </div>
-        <Link to="/">
+        <Link to='/'>
           {location.pathname === '/' ? (
             <span>
-              <i className="fas fa-square"></i>
+              <i className='fas fa-square'></i>
             </span>
           ) : (
             <span>
-              <i className="far fa-square"></i>
+              <i className='far fa-square'></i>
             </span>
           )}
           home
         </Link>
-        <Link to="/bio">
+        <Link to='/bio'>
           {location.pathname === '/bio' ? (
             <span>
-              <i className="fas fa-square"></i>
+              <i className='fas fa-square'></i>
             </span>
           ) : (
             <span>
-              <i className="far fa-square"></i>
+              <i className='far fa-square'></i>
             </span>
           )}
           bio
         </Link>
-        <Link to="/projects">
+        <Link to='/projects'>
           {location.pathname === '/projects' ? (
             <span>
-              <i className="fas fa-square"></i>
+              <i className='fas fa-square'></i>
             </span>
           ) : (
             <span>
-              <i className="far fa-square"></i>
+              <i className='far fa-square'></i>
             </span>
           )}
           projects
         </Link>
-        <Link to="/resume">
+        <Link to='/resume'>
           {location.pathname === '/resume' ? (
             <span>
-              <i className="fas fa-square"></i>
+              <i className='fas fa-square'></i>
             </span>
           ) : (
             <span>
-              <i className="far fa-square"></i>
+              <i className='far fa-square'></i>
             </span>
           )}
           resume
         </Link>
-        <Link to="/contact">
+        <Link to='/contact'>
           {location.pathname === '/contact' ? (
             <span>
-              <i className="fas fa-square"></i>
+              <i className='fas fa-square'></i>
             </span>
           ) : (
             <span>
-              <i className="far fa-square"></i>
+              <i className='far fa-square'></i>
             </span>
           )}
           contact
