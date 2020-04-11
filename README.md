@@ -6,7 +6,7 @@
 
 ---
 
-### The main goal for this project was to create a minimalistic website, with creative animations, to showcase my skills.
+### The main goal for this project was to create a minimalistic SPA, with creative animations, to showcase my skills.
 
 - Priorities
   - User friendly
@@ -18,6 +18,8 @@
 ### Notes
 
 1.  Navigation
-    - completed
+    - Completed
 2.  Welcome Page
-    - completed
+    - Completed
+3.  Home Page
+    - In progress

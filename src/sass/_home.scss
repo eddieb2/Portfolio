@@ -1,3 +1,13 @@
 .home-page-wrapper {
   height: 92vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  h1 {
+    font-size: 4.8rem;
+    color: $base-color;
+  }
+  p {
+    font-size: 2.6rem;
+  }
 }
