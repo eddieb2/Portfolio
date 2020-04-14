@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import './app.scss';
 // Components
@@ -13,9 +13,29 @@ import WelcomePage from './components/WelcomePage';
 import { UserContext } from './context/UserContext';
 
 function App() {
+  const [darkMode, setDarkMode] = useState({
+    checkedA: true,
+    checkedB: true,
+  });
+
+  const handleChange = (event) => {
+    setDarkMode({
+      ...darkMode,
+      [event.target.name]: event.target.checked,
+    });
+
+    const welcomePage = document.querySelector('.enter-site');
+    welcomePage.classList.toggle('dark-mode');
+
+    const navBar = document.querySelector('nav');
+    navBar.classList.toggle('dark-mode-nav');
+  };
+
   return (
     <Router>
-      <UserContext.Provider>
+      <UserContext.Provider
+        value={{ darkMode, setDarkMode, handleChange }}
+      >
         <WelcomePage />
         <Nav />
         <Route exact path='/'>
