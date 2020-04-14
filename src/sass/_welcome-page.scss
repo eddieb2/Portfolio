@@ -41,7 +41,7 @@
 
 .fas.fa-door-open.top-door {
   color: $base-color;
-  transition: all 3s ease-in-out;
+  transition: color 3s ease-in-out;
   animation: bounce 2s infinite;
 
   &:hover {
