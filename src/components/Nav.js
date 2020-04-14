@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { Switch } from '@material-ui/core';
+import { UserContext } from '../context/UserContext';
 
 const Nav = () => {
   const location = useLocation();
+  const { darkMode, handleChange } = useContext(UserContext);
 
   const dropDownHandler = (event) => {
     const list = document.querySelectorAll('a');
-    const clickMe = document.querySelector('.click-me');
+    // const clickMe = document.querySelector('.click-me');
     const codeIcons = document.querySelectorAll('.codeIcons');
 
     // Adds and removes the visible class to the anchor elements
@@ -21,7 +24,7 @@ const Nav = () => {
     });
 
     // Hides the "Click Me" text by the hamburger icon
-    clickMe.classList.toggle('hidden');
+    // clickMe.classList.toggle('hidden');
   };
 
   return (
@@ -29,7 +32,7 @@ const Nav = () => {
       <nav>
         <div className='drop-down-icon' onClick={dropDownHandler}>
           <i className='fas fa-bars fa-5x'></i>
-          <div className='click-me'>Click Me</div>
+          {/* <div className='click-me'>Click Me</div> */}
         </div>
         <div className='greeting'>
           <i className='fab fa-html5 codeIcons icon-animation-part-1'></i>
@@ -97,6 +100,16 @@ const Nav = () => {
           )}
           contact
         </Link>
+        <div className='mode-change-wrapper'>
+          <i class='fas fa-sun fa-3x'></i>
+          <Switch
+            checked={darkMode.checkedB}
+            onChange={handleChange}
+            color='primary'
+            name='checkedB'
+            inputProps={{ 'aria-label': 'primary checkbox' }}
+          />
+        </div>
       </nav>
     </>
   );

@@ -1,40 +1,30 @@
-import React, { useState } from 'react';
+import React, { useState, useContext } from 'react';
 import { Switch } from '@material-ui/core';
+import { UserContext } from '../context/UserContext';
 
 const WelcomePage = () => {
-  const [darkMode, setDarkMode] = useState({
-    checkedA: true,
-    checkedB: true,
-  });
+  const { darkMode, handleChange } = useContext(UserContext);
 
   const handleEntry = () => {
     const welcomePage = document.querySelector('.enter-site');
     welcomePage.classList.toggle('access-site');
   };
 
-  const handleChange = (event) => {
-    setDarkMode({
-      ...darkMode,
-      [event.target.name]: event.target.checked,
-    });
-
-    const welcomePage = document.querySelector('.enter-site');
-    welcomePage.classList.toggle('dark-mode');
-
-    const navBar = document.querySelector('nav');
-    navBar.classList.toggle('dark-mode-nav');
-  };
-
   return (
     <>
       <div className='enter-site'>
-        <Switch
-          checked={darkMode.checkedB}
-          onChange={handleChange}
-          color='primary'
-          name='checkedB'
-          inputProps={{ 'aria-label': 'primary checkbox' }}
-        />
+        <div className='toggle-wrapper'>
+          <div className='welcome-page-mode-toggle'>
+            <i class='fas fa-sun fa-3x'></i>
+            <Switch
+              checked={darkMode.checkedB}
+              onChange={handleChange}
+              color='primary'
+              name='checkedB'
+              inputProps={{ 'aria-label': 'primary checkbox' }}
+            />
+          </div>
+        </div>
         <div className='first no-clicking'>
           w<div className='reflection no-clicking'>w</div>
         </div>
