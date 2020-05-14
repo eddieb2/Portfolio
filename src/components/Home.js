@@ -9,7 +9,7 @@ const Home = () => {
 
   return (
     <div className='home-page-wrapper'>
-      <p>test</p>
+      <p>Work in progress</p>
     </div>
   );
 };
