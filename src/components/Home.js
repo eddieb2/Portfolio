@@ -7,7 +7,14 @@ const Home = () => {
 
 	useEffect(() => {}, [location]);
 
-	return <div className='home-page-wrapper'>{/* <p>Work in progress</p> */}</div>;
+	return (
+		<div className='home-wrapper'>
+			<div className='inner-home-wrapper'>
+				<h1>Under Construction...</h1>
+				<div className='heart'></div>
+			</div>
+		</div>
+	);
 };
 
 export default Home;

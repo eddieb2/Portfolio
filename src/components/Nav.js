@@ -30,10 +30,12 @@ const Nav = () => {
 	return (
 		<>
 			<nav>
-				{/* <h1>Eddie Blanciak</h1> */}
+				{/* <h1>eddie blanciak</h1> */}
+				{/* <h2>full-stack web dev</h2> */}
 				<div className='link-wrapper'>
 					<a href='#'>About</a>
 					<a href='#'>Projects</a>
+					<a href='#'>Resume</a>
 					<a href='#'>Contact</a>
 				</div>
 				<div className='icon-wrapper'>
