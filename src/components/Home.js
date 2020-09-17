@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
-import { gsap } from 'gsap';
+// import { gsap } from 'gsap';
 
 const Home = () => {
 	const location = useLocation();

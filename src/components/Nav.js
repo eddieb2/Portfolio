@@ -1,31 +1,31 @@
 import React, { useContext } from 'react';
-import { Link, useLocation } from 'react-router-dom';
-import { Switch } from '@material-ui/core';
+import { useLocation } from 'react-router-dom';
+// import { Switch } from '@material-ui/core';
 import { UserContext } from '../context/UserContext';
 
 const Nav = () => {
-	const location = useLocation();
-	const { darkMode, handleChange } = useContext(UserContext);
+	// const location = useLocation();
+	// const { darkMode, handleChange } = useContext(UserContext);
 
-	const dropDownHandler = (event) => {
-		const list = document.querySelectorAll('a');
-		// const clickMe = document.querySelector('.click-me');
-		const codeIcons = document.querySelectorAll('.codeIcons');
+	// const dropDownHandler = (event) => {
+	// 	const list = document.querySelectorAll('a');
+	// 	// const clickMe = document.querySelector('.click-me');
+	// 	const codeIcons = document.querySelectorAll('.codeIcons');
 
-		// Adds and removes the visible class to the anchor elements
-		list.forEach((item) => {
-			item.classList.toggle('visible');
-		});
+	// 	// Adds and removes the visible class to the anchor elements
+	// 	list.forEach((item) => {
+	// 		item.classList.toggle('visible');
+	// 	});
 
-		// Applies the animation to the icons in the nav
-		codeIcons.forEach((item) => {
-			item.classList.toggle('icon-animation-part-1');
-			item.classList.toggle('icon-animation-part-2');
-		});
+	// 	// Applies the animation to the icons in the nav
+	// 	codeIcons.forEach((item) => {
+	// 		item.classList.toggle('icon-animation-part-1');
+	// 		item.classList.toggle('icon-animation-part-2');
+	// 	});
 
-		// Hides the "Click Me" text by the hamburger icon
-		// clickMe.classList.toggle('hidden');
-	};
+	// 	// Hides the "Click Me" text by the hamburger icon
+	// 	// clickMe.classList.toggle('hidden');
+	// };
 
 	return (
 		<>
