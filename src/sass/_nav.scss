@@ -1,9 +1,8 @@
 nav {
 	position: relative;
-	background: $monochromatic1;
+	// background: $monochromatic1;
 	border: 1px solid $monochromatic1;
-	// border-bottom-left-radius: 15%;
-	// border-bottom-right-radius: 30%;
+	border-bottom-left-radius: 15%;
 	box-shadow: 0 5px 20px 0px $monochromatic1;
 	height: 100px;
 	display: flex;
@@ -23,16 +22,16 @@ nav {
 .fab.fa-github-square {
 	position: relative;
 	font-size: 5rem;
-	// color: $monochromatic1;
-	color: $monochromatic3;
+	color: $monochromatic1;
+	// color: $monochromatic3;
 	cursor: pointer;
 }
 
 .link-wrapper {
 	display: flex;
 	justify-content: space-between;
-	// color: $monochromatic1;
-	color: $monochromatic3;
+	color: $monochromatic1;
+	// color: $monochromatic3;
 	width: 50%;
 	a {
 		font-size: 3.8rem;
