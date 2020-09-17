@@ -3,15 +3,11 @@ import { useLocation } from 'react-router-dom';
 import { gsap } from 'gsap';
 
 const Home = () => {
-  const location = useLocation();
+	const location = useLocation();
 
-  useEffect(() => {}, [location]);
+	useEffect(() => {}, [location]);
 
-  return (
-    <div className='home-page-wrapper'>
-      <p>Work in progress</p>
-    </div>
-  );
+	return <div className='home-page-wrapper'>{/* <p>Work in progress</p> */}</div>;
 };
 
 export default Home;
