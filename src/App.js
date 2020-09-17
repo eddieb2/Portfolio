@@ -34,7 +34,7 @@ function App() {
 	return (
 		<Router>
 			<UserContext.Provider value={{ darkMode, setDarkMode, handleChange }}>
-				{/* <WelcomePage /> */}
+				<WelcomePage />
 				<Nav />
 				<Route exact path='/'>
 					<Home />
