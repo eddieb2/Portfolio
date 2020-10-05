@@ -1,9 +1,9 @@
 .enter-site {
 	position: absolute;
-	z-index: 1;
+	z-index: 2;
 
 	// NOTE Lightmode Theme
-	background-color: $monochromatic3;
+	background-color: $dark-scheme4;
 
 	height: 100%;
 	width: 100%;
@@ -40,7 +40,7 @@
 }
 
 .fas.fa-door-open.top-door {
-	color: $base-color;
+	color: $welcome-letter-color;
 	transition: color 3s ease-in-out;
 	animation: bounce 2s infinite;
 
@@ -59,7 +59,7 @@
 	top: 20%;
 	left: 20%;
 	padding: 1%;
-	color: $base-color;
+	color: $welcome-letter-color;
 	animation: first 2s;
 }
 .second {
@@ -67,7 +67,7 @@
 	top: 20%;
 	left: 30%;
 	padding: 1%;
-	color: $base-color;
+	color: $welcome-letter-color;
 	animation: first 2s;
 }
 .third {
@@ -75,7 +75,7 @@
 	top: 20%;
 	left: 40%;
 	padding: 1%;
-	color: $base-color;
+	color: $welcome-letter-color;
 	animation: first 2s;
 }
 .fourth {
@@ -83,7 +83,7 @@
 	top: 20%;
 	left: 50%;
 	padding: 1%;
-	color: $base-color;
+	color: $welcome-letter-color;
 	animation: first 2s;
 }
 .fifth {
@@ -91,7 +91,7 @@
 	top: 20%;
 	left: 60%;
 	padding: 1%;
-	color: $base-color;
+	color: $welcome-letter-color;
 	animation: first 2s;
 }
 .sixth {
@@ -99,7 +99,7 @@
 	top: 20%;
 	left: 70%;
 	padding: 1%;
-	color: $base-color;
+	color: $welcome-letter-color;
 	animation: first 2s;
 }
 .seventh {
@@ -107,7 +107,7 @@
 	top: 20%;
 	left: 80%;
 	padding: 1%;
-	color: $base-color;
+	color: $welcome-letter-color;
 	animation: first 2s;
 }
 
@@ -142,7 +142,7 @@
 }
 
 .fas.fa-door-open.reflection-door {
-	color: $base-color;
+	color: $welcome-letter-color;
 	transform: rotate(180deg);
 	transform: scaleY(-1);
 	opacity: 1;

@@ -1,10 +1,25 @@
 @import '~destyle.css';
 
 * {
-  box-sizing: border-box;
-  font-family: 'Oxygen', sans-serif;
+	box-sizing: border-box;
+	font-family: 'Oxygen', sans-serif;
+}
+html {
+	scroll-behavior: smooth;
 }
 
-html {
-  font-size: 62.5%;
+html,
+body,
+#root {
+	font-size: 62.5%;
+	height: 100%;
+}
+
+body {
+	background-color: $dark-scheme4;
+}
+
+#root {
+	display: flex;
+	flex-direction: column;
 }

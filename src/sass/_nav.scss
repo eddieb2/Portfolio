@@ -1,52 +1,8 @@
 nav {
-	position: relative;
-	background: $monochromatic1;
-	border: 1px solid $monochromatic1;
-	border-bottom-left-radius: 15%;
-	// border-bottom-right-radius: 30%;
-	box-shadow: 0 5px 20px 0px $monochromatic1;
+	background: $dark-scheme3;
 	height: 100px;
+	width: 100%;
 	display: flex;
 	justify-content: flex-end;
 	align-items: center;
-
-	h1 {
-		position: absolute;
-		font-style: italic;
-		top: 10px;
-		left: 10px;
-		font-size: 3rem;
-		color: $monochromatic3;
-	}
-}
-
-.icon-wrapper {
-	position: absolute;
-	top: 25%;
-	left: 2%;
-	display: flex;
-	justify-content: space-between;
-	width: 6%;
-}
-
-.fab.fa-linkedin,
-.fab.fa-github-square {
-	position: relative;
-	font-size: 5rem;
-	color: $monochromatic3;
-	cursor: pointer;
-}
-
-.link-wrapper {
-	display: flex;
-	justify-content: space-between;
-	color: $monochromatic3;
-	width: 50%;
-	margin-right: 5%;
-	a {
-		font-size: 4.2rem;
-		width: 20%;
-		text-align: center;
-		// text-decoration: underline;
-	}
 }
