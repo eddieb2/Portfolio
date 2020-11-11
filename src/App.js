@@ -45,7 +45,7 @@ function App() {
 					handleChange,
 				}}
 			>
-				{/* <WelcomePage /> */}
+				<WelcomePage />
 				<Nav />
 				<Route exact path='/' component={Home} />
 				<Route
