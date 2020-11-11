@@ -11,8 +11,9 @@ const useStyles = makeStyles((theme) => ({
 			flexDirection: 'column',
 			alignItems: 'center',
 		},
-		[theme.breakpoints.down(1156)]: {
+		[theme.breakpoints.down(1400)]: {
 			flexWrap: 'wrap',
+			// margin: '2%',
 		},
 	},
 }));
