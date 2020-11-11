@@ -10,6 +10,12 @@
 	font-size: 6rem;
 	clip-path: circle(100%);
 	-webkit-clip-path: circle(100%);
+	@media (max-width: 600px) {
+		font-size: 4rem;
+	}
+	@media (max-width: 375px) {
+		font-size: 3rem;
+	}
 	.door {
 		cursor: pointer;
 		position: absolute;
