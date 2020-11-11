@@ -1,64 +1,108 @@
 import React, { useContext } from 'react';
-import { useLocation } from 'react-router-dom';
-// import { Switch } from '@material-ui/core';
-import { UserContext } from '../context/UserContext';
+import { useHistory } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import { makeStyles } from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
+import Button from '@material-ui/core/Button';
+import IconButton from '@material-ui/core/IconButton';
+import MenuIcon from '@material-ui/icons/Menu';
+import LinkedInIcon from '@material-ui/icons/LinkedIn';
+import GitHubIcon from '@material-ui/icons/GitHub';
+
+const useStyles = makeStyles((theme) => ({
+	root: {
+		// flexGrow: 1,
+	},
+	menuButton: {
+		marginRight: theme.spacing(2),
+	},
+	title: {
+		flexGrow: 1,
+	},
+}));
 
 const Nav = () => {
-	// const location = useLocation();
 	// const { darkMode, handleChange } = useContext(UserContext);
-
-	// const dropDownHandler = (event) => {
-	// 	const list = document.querySelectorAll('a');
-	// 	// const clickMe = document.querySelector('.click-me');
-	// 	const codeIcons = document.querySelectorAll('.codeIcons');
-
-	// 	// Adds and removes the visible class to the anchor elements
-	// 	list.forEach((item) => {
-	// 		item.classList.toggle('visible');
-	// 	});
-
-	// 	// Applies the animation to the icons in the nav
-	// 	codeIcons.forEach((item) => {
-	// 		item.classList.toggle('icon-animation-part-1');
-	// 		item.classList.toggle('icon-animation-part-2');
-	// 	});
-
-	// 	// Hides the "Click Me" text by the hamburger icon
-	// 	// clickMe.classList.toggle('hidden');
-	// };
+	const classes = useStyles();
+	const { history } = useHistory();
 
 	return (
-		<>
-			<nav>
-				{/* <h1>eddie blanciak</h1> */}
-				{/* <h2>full-stack web dev</h2> */}
-				<div className='link-wrapper'>
-					<a href='#'>About</a>
-					<a href='#'>Projects</a>
-					<a href='#'>Resume</a>
-					<a href='#'>Contact</a>
-				</div>
-				<div className='icon-wrapper'>
-					<i
-						class='fab fa-linkedin'
-						onClick={() => {
-							window.location.href =
-								// 'https://www.linkedin.com/in/edward-blanciak-7a78b189/';
-								window.open(
-									'https://www.linkedin.com/in/edward-blanciak-7a78b189/'
-								);
-						}}
-					></i>
-					<i
-						class='fab fa-github-square'
-						onClick={() => {
-							// window.location.href = 'https://github.com/eddieb2';
-							window.open('https://github.com/eddieb2');
-						}}
-					></i>
-				</div>
-			</nav>
-		</>
+		<div className={classes.root}>
+			<AppBar
+				position='static'
+				style={{ backgroundColor: '#526089' }}
+			>
+				<Toolbar>
+					<IconButton
+						edge='start'
+						className={classes.menuButton}
+						color='inherit'
+						aria-label='menu'
+					>
+						<MenuIcon />
+					</IconButton>
+					<Typography
+						variant='h6'
+						className={classes.title}
+					></Typography>
+					<Button
+						component={Link}
+						to='/'
+						color='inherit'
+						style={{ fontSize: '2rem' }}
+					>
+						About
+					</Button>
+					<Button
+						component={Link}
+						to='/projects'
+						color='inherit'
+						style={{ fontSize: '2rem' }}
+					>
+						Projects
+					</Button>
+					<Button
+						component={Link}
+						to='/resume'
+						color='inherit'
+						style={{ fontSize: '2rem' }}
+					>
+						Resume
+					</Button>
+				</Toolbar>
+			</AppBar>
+		</div>
 	);
 };
 export default Nav;
+
+// <>
+// 	<nav style={{ fontSize: '2.6' }}>
+// 		<div className='link-wrapper'>
+// 			<a href='#'>About</a>
+// 			<a href='#'>Education</a>
+// 			<a href='#'>Projects</a>
+// 			<a href='#'>Contact</a>
+// 		</div>
+// 		<div className='icon-wrapper'>
+// 			<i
+// 				className='fab fa-linkedin'
+// 				onClick={() => {
+// 					window.location.href = window.open(
+// 						'https://www.linkedin.com/in/edward-blanciak-7a78b189/'
+// 					);
+// 				}}
+// 			></i>
+// 			<i
+// 				className='fab fa-github-square'
+// 				onClick={() => {
+// 					window.open(
+// 						'https://github.com/eddieb2'
+// 					);
+// 				}}
+// 			></i>
+// 		</div>
+// 	</nav>
+// </>

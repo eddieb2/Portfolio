@@ -1,18 +1,35 @@
-import React, { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
-// import { gsap } from 'gsap';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
-	const location = useLocation();
-
-	useEffect(() => {}, [location]);
-
 	return (
-		<div className='home-wrapper'>
-			<div className='inner-home-wrapper'>
-				<h1>Under Construction...</h1>
-				<div className='heart'></div>
-			</div>
+		<div
+			style={{
+				display: 'flex',
+				justifyContent: 'center',
+				marginTop: '20%',
+			}}
+		>
+			<h1
+				style={{
+					textAlign: 'center',
+					fontSize: '3.6rem',
+					color: 'white',
+				}}
+			>
+				Currently under construction!
+				<br />
+				Some of my projects are available{' '}
+				<Link
+					style={{
+						color: '#526089',
+						textDecoration: 'underline',
+					}}
+					to='/projects'
+				>
+					here!
+				</Link>
+			</h1>
 		</div>
 	);
 };
