@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const Home = () => {
+const Resume = () => {
 	return (
 		<div
 			style={{
@@ -17,21 +17,17 @@ const Home = () => {
 					color: 'white',
 				}}
 			>
-				Currently under construction!
-				<br />
-				Some of my projects are available{' '}
+				Resume coming soon!
 				<Link
 					style={{
 						color: '#526089',
 						textDecoration: 'underline',
 					}}
 					to='/projects'
-				>
-					here!
-				</Link>
+				></Link>
 			</h1>
 		</div>
 	);
 };
 
-export default Home;
+export default Resume;
