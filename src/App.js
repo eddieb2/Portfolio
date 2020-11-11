@@ -1,12 +1,18 @@
 import React, { useState, useEffect } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
+import {
+	BrowserRouter as Router,
+	Route,
+	Switch,
+} from 'react-router-dom';
 
-// Components
+// SECTION Components
 import Nav from './components/Nav';
 import Home from './components/Home';
 import WelcomePage from './components/WelcomePage';
+import Projects from './components/Projects';
+import Resume from './components/Resume';
 
-// Context
+// SECTION Context
 import { UserContext } from './context/UserContext';
 
 function App() {
@@ -21,7 +27,9 @@ function App() {
 			[event.target.name]: event.target.checked,
 		});
 
-		const welcomePage = document.querySelector('.enter-site');
+		const welcomePage = document.querySelector(
+			'.enter-site'
+		);
 		welcomePage.classList.toggle('dark-mode');
 
 		const navBar = document.querySelector('nav');
@@ -30,10 +38,26 @@ function App() {
 
 	return (
 		<Router>
-			<UserContext.Provider value={{ darkMode, setDarkMode, handleChange }}>
+			<UserContext.Provider
+				value={{
+					darkMode,
+					setDarkMode,
+					handleChange,
+				}}
+			>
 				{/* <WelcomePage /> */}
 				<Nav />
-				<Home />
+				<Route exact path='/' component={Home} />
+				<Route
+					exact
+					path='/projects'
+					component={Projects}
+				/>
+				<Route
+					exact
+					path='/resume'
+					component={Resume}
+				/>
 			</UserContext.Provider>
 		</Router>
 	);
