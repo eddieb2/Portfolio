@@ -1,7 +1,24 @@
 import React, { useState } from 'react';
 import ProjectItem from './ProjectItem';
+import { makeStyles } from '@material-ui/core/styles';
+
+const useStyles = makeStyles((theme) => ({
+	root: {
+		display: 'flex',
+		justifyContent: 'space-around',
+		marginTop: '2%',
+		[theme.breakpoints.down('sm')]: {
+			flexDirection: 'column',
+			alignItems: 'center',
+		},
+		[theme.breakpoints.down(1156)]: {
+			flexWrap: 'wrap',
+		},
+	},
+}));
 
 const Projects = () => {
+	const classes = useStyles();
 	const [proj, setProj] = useState([
 		{
 			id: 1,
@@ -98,14 +115,8 @@ const Projects = () => {
 	]);
 
 	return (
-		<div
-			style={{
-				display: 'flex',
-				justifyContent: 'space-evenly',
-				marginTop: '2%',
-			}}
-		>
-			{proj.map((item, i) => (
+		<div className={classes.root}>
+			{proj.map((item) => (
 				<ProjectItem key={item.id} item={item} />
 			))}
 		</div>

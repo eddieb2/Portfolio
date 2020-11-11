@@ -17,6 +17,12 @@ const useStyles = makeStyles((theme) => ({
 		maxWidth: 345,
 		boxShadow: '10px 10px 10px 0 black',
 		border: '3px solid #9ba2c1',
+		[theme.breakpoints.down('sm')]: {
+			marginBottom: '5%',
+		},
+		[theme.breakpoints.down(1156)]: {
+			margin: '2%',
+		},
 	},
 	media: {
 		// height: '100%',
