@@ -30,8 +30,6 @@ const Nav = () => {
 	return (
 		<>
 			<nav>
-				{/* <h1>eddie blanciak</h1> */}
-				{/* <h2>full-stack web dev</h2> */}
 				<div className='link-wrapper'>
 					<a href='#'>About</a>
 					<a href='#'>Projects</a>
@@ -42,17 +40,14 @@ const Nav = () => {
 					<i
 						class='fab fa-linkedin'
 						onClick={() => {
-							window.location.href =
-								// 'https://www.linkedin.com/in/edward-blanciak-7a78b189/';
-								window.open(
-									'https://www.linkedin.com/in/edward-blanciak-7a78b189/'
-								);
+							window.location.href = window.open(
+								'https://www.linkedin.com/in/edward-blanciak-7a78b189/'
+							);
 						}}
 					></i>
 					<i
 						class='fab fa-github-square'
 						onClick={() => {
-							// window.location.href = 'https://github.com/eddieb2';
 							window.open('https://github.com/eddieb2');
 						}}
 					></i>

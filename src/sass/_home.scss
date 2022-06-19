@@ -27,19 +27,19 @@ body {
 .inner-home-wrapper {
 	display: flex;
 	justify-content: center;
-	border: 5px solid $monochromatic1;
+	// border: 5px solid $monochromatic1;
 	height: 75%;
 	width: 50%;
-	font-size: 5rem;
-	border-bottom-right-radius: 20px;
-	border-top-left-radius: 20px;
-	border-top-right-radius: 100px;
-	border-bottom-left-radius: 100px;
-	box-shadow: 0 5px 10px 0px $monochromatic1, 5px 0px 10px 0 $monochromatic1;
-	background-color: $monochromatic1;
+	font-size: 4rem;
+	// border-bottom-right-radius: 20px;
+	// border-top-left-radius: 20px;
+	// border-top-right-radius: 100px;
+	// border-bottom-left-radius: 100px;
+	// box-shadow: 0 5px 10px 0px $monochromatic1, 5px 0px 10px 0 $monochromatic1;
+	// background-color: $monochromatic1;
 	h1 {
 		text-align: center;
-		color: $monochromatic3;
+		color: $base-color;
 		position: relative;
 		top: 20%;
 		// text-decoration: underline;
@@ -53,7 +53,7 @@ body {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	background-color: $monochromatic3;
+	background-color: $base-color;
 	height: 50px;
 	width: 50px;
 	transform: rotate(-45deg);
@@ -63,7 +63,7 @@ body {
 }
 
 .heart:after {
-	background-color: $monochromatic3;
+	background-color: $base-color;
 	content: '';
 	border-radius: 50%;
 	position: absolute;
@@ -74,7 +74,7 @@ body {
 }
 
 .heart:before {
-	background-color: $monochromatic3;
+	background-color: $base-color;
 	content: '';
 	border-radius: 50%;
 	position: absolute;
@@ -91,5 +91,15 @@ body {
 
 	50% {
 		transform: scale(0.6) rotate(-45deg);
+	}
+}
+
+// FIXME Add fade in for home text
+@keyframes fade {
+	from {
+		opacity: 0;
+	}
+	to {
+		opacity: 1;
 	}
 }
