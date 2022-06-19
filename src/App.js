@@ -1,15 +1,18 @@
-import React, { useState } from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import './app.scss';
-// Components
+import React, { useState, useEffect } from 'react';
+import {
+	BrowserRouter as Router,
+	Route,
+	Switch,
+} from 'react-router-dom';
+
+// SECTION Components
 import Nav from './components/Nav';
 import Home from './components/Home';
-import Bio from './components/Bio';
-import Resume from './components/Resume';
-import Projects from './components/Projects';
-import Contact from './components/Contact';
 import WelcomePage from './components/WelcomePage';
-// Context
+import Projects from './components/Projects';
+import Resume from './components/Resume';
+
+// SECTION Context
 import { UserContext } from './context/UserContext';
 
 function App() {
@@ -44,25 +47,29 @@ function App() {
 	return (
 		<Router>
 			<UserContext.Provider
+<<<<<<< HEAD
 				value={{ darkMode, setDarkMode, handleChange }}
+=======
+				value={{
+					darkMode,
+					setDarkMode,
+					handleChange,
+				}}
+>>>>>>> 6b54b11e195e2f36d02d64d9314932680e0bc795
 			>
 				<WelcomePage />
 				<Nav />
-				<Route exact path='/'>
-					<Home />
-				</Route>
-				<Route path='/bio'>
-					<Bio />
-				</Route>
-				<Route path='/projects'>
-					<Projects />
-				</Route>
-				<Route path='/resume'>
-					<Resume />
-				</Route>
-				<Route path='/contact'>
-					<Contact />
-				</Route>
+				<Route exact path='/' component={Home} />
+				<Route
+					exact
+					path='/projects'
+					component={Projects}
+				/>
+				<Route
+					exact
+					path='/resume'
+					component={Resume}
+				/>
 			</UserContext.Provider>
 		</Router>
 	);

@@ -1,12 +1,7 @@
-import React, { useEffect } from 'react';
-import { useLocation } from 'react-router-dom';
-// import { gsap } from 'gsap';
+import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
-	const location = useLocation();
-
-	useEffect(() => {}, [location]);
-
 	return (
 		<div className='home-wrapper'>
 			<div className='inner-home-wrapper'>

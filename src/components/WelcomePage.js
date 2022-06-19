@@ -3,7 +3,9 @@ import { Switch } from '@material-ui/core';
 import { UserContext } from '../context/UserContext';
 
 const WelcomePage = () => {
-	const { darkMode, handleChange } = useContext(UserContext);
+	const { darkMode, handleChange } = useContext(
+		UserContext
+	);
 
 	const handleEntry = () => {
 		// Triggers animation to reveal home page
@@ -30,6 +32,7 @@ const WelcomePage = () => {
 							}}
 						/>
 					</div>
+<<<<<<< HEAD
 				</div>
 				<h1 className='first no-clicking'>
 					w<h1 className='reflection no-clicking'>w</h1>
@@ -53,6 +56,55 @@ const WelcomePage = () => {
 					e<h1 className='reflection no-clicking'>e</h1>
 				</h1>
 				<div className='door' onClick={handleEntry}>
+=======
+				</div> */}
+				<div className='first no-clicking'>
+					w
+					<div className='reflection no-clicking'>
+						w
+					</div>
+				</div>
+				<div className='second no-clicking'>
+					e
+					<div className='reflection no-clicking'>
+						e
+					</div>
+				</div>
+				<div className='third no-clicking'>
+					l
+					<div className='reflection no-clicking'>
+						l
+					</div>
+				</div>
+				<div className='fourth no-clicking'>
+					c
+					<div className='reflection no-clicking'>
+						c
+					</div>
+				</div>
+				<div className='fifth no-clicking'>
+					o
+					<div className='reflection no-clicking'>
+						o
+					</div>
+				</div>
+				<div className='sixth no-clicking'>
+					m
+					<div className='reflection no-clicking'>
+						m
+					</div>
+				</div>
+				<div className='seventh no-clicking'>
+					e
+					<div className='reflection no-clicking'>
+						e
+					</div>
+				</div>
+				<div
+					className='door'
+					onClick={handleEntry}
+				>
+>>>>>>> 6b54b11e195e2f36d02d64d9314932680e0bc795
 					<i className='fas fa-door-open top-door '></i>
 					<br></br>
 					<i className='fas fa-door-open reflection-door'></i>
