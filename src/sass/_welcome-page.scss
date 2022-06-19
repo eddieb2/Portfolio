@@ -1,10 +1,6 @@
 .enter-site {
 	position: absolute;
-	z-index: 2;
-
-	// NOTE Lightmode Theme
-	background-color: $dark-scheme4;
-
+	z-index: 1;
 	height: 100%;
 	width: 100%;
 	font-size: 6rem;
@@ -22,38 +18,45 @@
 		top: 45%;
 		left: 48%;
 		text-align: center;
-		h1 {
-			color: $base-color;
-			font-size: 1.25rem;
-			text-align: center;
-			transition: all 1s ease-in;
-			&:hover {
-				color: black;
-				text-decoration: underline;
-			}
-		}
+		// FIXME Probably can be removed
+		// h1 {
+		// 	color: $base-color;
+		// 	font-size: 1.25rem;
+		// 	text-align: center;
+		// 	transition: all 1s ease-in;
+		// 	&:hover {
+		// 		color: black;
+		// 		text-decoration: underline;
+		// 	}
+		// }
 	}
 }
 
-.dark-mode {
+.light-mode * {
+	background-color: $monochromatic3;
+	color: $base-color;
+	transition: 2s linear;
+}
+
+// FIXME Sun icon is fading in. Needs to be static
+// .light-mode:not([data-attr='icon']) {
+// 	transition: none !important;
+// }
+
+// FIXME Switch bar's color is too light. Darken it.
+// #switch {
+// 	color: red !important;
+// 	background-color: red !important;
+// }
+
+.dark-mode * {
 	background: #222;
+	color: white !important;
+	transition: 2s linear;
 }
 
-.access-site {
-	clip-path: circle(0px at 48% 45%);
-	-webkit-clip-path: circle(0px at 48% 45%);
-	transition: clip-path 1s ease-in;
-}
-
-.fas.fa-door-open.top-door {
-	color: $welcome-letter-color;
-	transition: color 3s ease-in-out;
-	animation: bounce 2s infinite;
-
-	&:hover {
-		color: black;
-		transition: all 3s ease-in-out;
-	}
+.no-animation {
+	animation: none !important;
 }
 
 .no-clicking {
@@ -152,7 +155,7 @@
 	transform: rotate(180deg);
 	transform: scaleY(-1);
 	opacity: 1;
-	animation: fade 2s infinite ease-in-out;
+	animation: fade 3s infinite ease-in-out;
 	mask-image: -webkit-gradient(
 		linear,
 		right top,
@@ -171,6 +174,25 @@
 	);
 }
 
+// Door Animation Bounce
+.fas.fa-door-open.top-door {
+	color: $base-color;
+	animation: bounce 2s infinite;
+
+	// &:hover {
+	// 	color: black !important;
+	// 	transition: all 3s ease-in-out;
+	// }
+}
+
+// Fade out
+.access-site {
+	animation: fade2 2s forwards;
+	-webkit-animation: fade2 2s forwards;
+	pointer-events: none;
+}
+
+// Used for door reflection
 @keyframes fade {
 	0%,
 	100% {
@@ -180,6 +202,16 @@
 		opacity: 1;
 	}
 }
+
+@keyframes fade2 {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+
 @keyframes fade-reflection {
 	0%,
 	50% {
@@ -224,17 +256,17 @@
 	text-align: center;
 }
 
-.welcome-page-mode-toggle {
-	display: flex;
-	position: relative;
-}
+// .welcome-page-mode-toggle {
+// 	display: flex;
+// 	position: relative;
+// }
 
 .welcome-page-mode-toggle {
 	position: absolute;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	color: orange;
+	color: black !important;
 	font-size: 1.2rem;
 	padding-top: 1%;
 	padding-left: 1%;

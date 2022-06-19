@@ -27,10 +27,18 @@ function App() {
 			[event.target.name]: event.target.checked,
 		});
 
-		const welcomePage = document.querySelector(
-			'.enter-site'
-		);
-		welcomePage.classList.toggle('dark-mode');
+		// const welcomePage = document.querySelector('.enter-site');
+		const welcomePage = document.querySelector('.welcome-page');
+
+		console.log(darkMode);
+
+		if (darkMode.checkedB === true) {
+			welcomePage.classList.add('dark-mode');
+			welcomePage.classList.remove('light-mode');
+		} else {
+			welcomePage.classList.add('light-mode');
+			welcomePage.classList.remove('dark-mode');
+		}
 
 		const navBar = document.querySelector('nav');
 		navBar.classList.toggle('dark-mode-nav');
@@ -39,11 +47,15 @@ function App() {
 	return (
 		<Router>
 			<UserContext.Provider
+<<<<<<< HEAD
+				value={{ darkMode, setDarkMode, handleChange }}
+=======
 				value={{
 					darkMode,
 					setDarkMode,
 					handleChange,
 				}}
+>>>>>>> 6b54b11e195e2f36d02d64d9314932680e0bc795
 			>
 				<WelcomePage />
 				<Nav />

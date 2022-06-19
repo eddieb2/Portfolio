@@ -28,47 +28,32 @@ const Nav = () => {
 	const classes = useStyles();
 
 	return (
-		<div className={classes.root}>
-			<AppBar
-				position='static'
-				style={{ backgroundColor: '#526089' }}
-			>
-				<Toolbar>
-					<IconButton
-						edge='start'
-						className={classes.menuButton}
-						color='inherit'
-						aria-label='menu'
-					>
-						<MenuIcon />
-					</IconButton>
-					<Button
-						component={Link}
-						className={classes.navLinks}
-						to='/'
-						color='inherit'
-					>
-						About
-					</Button>
-					<Button
-						component={Link}
-						className={classes.navLinks}
-						to='/projects'
-						color='inherit'
-					>
-						Projects
-					</Button>
-					<Button
-						component={Link}
-						className={classes.navLinks}
-						to='/resume'
-						color='inherit'
-					>
-						Resume
-					</Button>
-				</Toolbar>
-			</AppBar>
-		</div>
+		<>
+			<nav>
+				<div className='link-wrapper'>
+					<a href='#'>About</a>
+					<a href='#'>Projects</a>
+					<a href='#'>Resume</a>
+					<a href='#'>Contact</a>
+				</div>
+				<div className='icon-wrapper'>
+					<i
+						class='fab fa-linkedin'
+						onClick={() => {
+							window.location.href = window.open(
+								'https://www.linkedin.com/in/edward-blanciak-7a78b189/'
+							);
+						}}
+					></i>
+					<i
+						class='fab fa-github-square'
+						onClick={() => {
+							window.open('https://github.com/eddieb2');
+						}}
+					></i>
+				</div>
+			</nav>
+		</>
 	);
 };
 export default Nav;
